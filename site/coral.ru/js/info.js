@@ -14,21 +14,29 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/turkey/tyrkeylist/#tyrkeylist',
-					'https://www.coral.ru/main/turkey/antalya/antalyalist/',
-					'https://www.coral.ru/main/turkey/bodrum/bodrumlist/',
-					'https://www.coral.ru/main/turkey/marmarisfethiyelist/'
+					{
+						label: 'Экскурсии по красотам Турции',
+						url: 'https://www.coral.ru/main/turkey/tyrkeylist/#tyrkeylist'
+					},
+					{
+						label: 'Экскурсии из Антальи',
+						url: 'https://www.coral.ru/main/turkey/antalya/antalyalist/'
+					},
+					{
+						label: 'Экскурсии из Бодрума',
+						url: 'https://www.coral.ru/main/turkey/bodrum/bodrumlist/'
+					}
 				]
 			},
 			{
 				name: 'Корпоративные программы',
 				list: [
 					{
-						label: 'Исторические сокровища',
+						label: 'Стамбул и Каппадокия',
 						pdf: 'https://cdn.coral.ru/content/img/ist_cappadocia.pdf',
 					},
 					{
-						label: 'По Турции с караваном',
+						label: 'Квест-путешествие по Турции',
 						pdf: 'https://cdn.coral.ru/content/img/turkeyquestjourney.pdf',
 					}
 				]
@@ -42,7 +50,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/main/azerbaijan/ekskursionnie-turi-v-azerbaydzhan/'
+					{
+						label: 'Экскурсионный тур в Азербайджан',
+						url: 'https://www.coral.ru/main/azerbaijan/ekskursionnie-turi-v-azerbaydzhan/'
+					}
 				],
 			},
 			{
@@ -51,18 +62,15 @@ const SETTINGS = [
 			},
 			{
 				name: 'Экскурсии',
-				list: [
-					'https://www.coral.ru/main/turkey/tyrkeylist/#tyrkeylist',
-					'https://www.coral.ru/main/turkey/antalya/antalyalist/',
-					'https://www.coral.ru/main/turkey/bodrum/bodrumlist/',
-					'https://www.coral.ru/main/turkey/marmarisfethiyelist/'
-				]
+				list: []
 			},
 			{
 				name: 'Корпоративные программы',
 				list: [
-					'https://cdn.coral.ru/content/img/ist_cappadocia.pdf',
-					'https://cdn.coral.ru/content/img/turkeyquestjourney.pdf'
+					{
+						label: 'Страна Огней, Баку и окрестности',
+						pdf: 'https://cdn.coral.ru/content/img/azerbaijan.pdf'
+					}
 				]
 			}
 		]
@@ -74,13 +82,19 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/armeniya/ekskursionnie-turi-v-armeniyu/'
+					{
+						label: 'Экскурсионный тур в Армению',
+						url: 'https://www.coral.ru/armeniya/ekskursionnie-turi-v-armeniyu/'
+					}
 				],
 			},
 			{
 				name: 'Достопримечательности',
 				list: [
-					'https://www.coral.ru/armeniya/attractionarmenia/'
+					{
+						label: 'Достопримечательности Армении',
+						url: 'https://www.coral.ru/armeniya/attractionarmenia/'
+					}
 				]
 			},
 			{
@@ -90,7 +104,10 @@ const SETTINGS = [
 			{
 				name: 'Корпоративные программы',
 				list: [
-					'https://cdn.coral.ru/content/img/armenia.pdf'
+					{
+						label: 'Самое главное за 5 дней',
+						pdf: 'https://cdn.coral.ru/content/img/armenia.pdf'
+					}
 				]
 			}
 		]
@@ -106,7 +123,10 @@ const SETTINGS = [
 			{
 				name: 'Достопримечательности',
 				list: [
-					'https://www.coral.ru/main/bahrein/otdyh-v-bahrein/'
+					{
+						label: 'Отдых в Бахрейне',
+						url: 'https://www.coral.ru/main/bahrein/otdyh-v-bahrein/'
+					}
 				]
 			},
 			{
@@ -126,7 +146,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/main/bulgaria/bulgarialist/'
+					{
+						label: 'Экскурсия №1',
+						url: 'https://www.coral.ru/main/bulgaria/bulgarialist/'
+					}
 				]
 			},
 			{
@@ -136,7 +159,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/bulgaria/bulgarialist/'
+					{
+						label: 'Экскурсия по Болгарии',
+						url: 'https://www.coral.ru/main/bulgaria/bulgarialist/'
+					}
 				]
 			},
 			{
@@ -152,13 +178,20 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/belarus/ekskursionnie-turi-v-belarus/'
+					{
+						label: 'Экскурсия в Беларусь',
+						url: 'https://www.coral.ru/belarus/ekskursionnie-turi-v-belarus/'
+					}
 				]
 			},
 			{
 				name: 'Достопримечательности',
 				list: [
-					'https://www.coral.ru/belarus/dostoprimechatelnosti-belarusi/'
+					{
+						label: 'Достопримечательности Белорусии',
+						url: 'https://www.coral.ru/belarus/dostoprimechatelnosti-belarusi/'
+					}
+
 				]
 			},
 			{
@@ -186,7 +219,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/vietnam/exvietnam/'
+					{
+						label: "Экскурсия во Вьетнам",
+						url: 'https://www.coral.ru/main/vietnam/exvietnam/'
+					}
 				]
 			},
 			{
@@ -202,20 +238,24 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/georgia/ekskursionnye-tury-v-gruziyu/'
+					{
+						label: 'Тур в Грузию',
+						url: 'https://www.coral.ru/georgia/ekskursionnye-tury-v-gruziyu/'
+					}
 				]
 			},
 			{
 				name: 'Достопримечательности',
 				list: [
-					'https://www.coral.ru/georgia/dostoprimechatelynosti-gruzii/'
+					{
+						label: 'Достопримечательности в Грузии',
+						url: 'https://www.coral.ru/georgia/dostoprimechatelynosti-gruzii/'
+					}
 				]
 			},
 			{
 				name: 'Экскурсии',
-				list: [
-					'https://www.coral.ru/main/greece/greecelist/'
-				]
+				list: []
 			},
 			{
 				name: 'Корпоративные программы',
@@ -224,7 +264,7 @@ const SETTINGS = [
 		]
 	},
 	{
-		country_name: 'Доминикана',
+		country_name: 'Доминиканская Республика',
 		capital: 'Санто-Доминго',
 		product: [
 			{
@@ -238,7 +278,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/dominikana/exdominikana/'
+					{
+						label: 'Экскурсия в Доминикану',
+						url: 'https://www.coral.ru/main/dominikana/exdominikana/'
+					}
 				]
 			},
 			{
@@ -262,9 +305,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/egypt/egyptexcurcion/',
-					'https://www.coral.ru/main/egypt/sharm/sharmelsheikhlist/',
-					'https://www.coral.ru/main/egypt/hurghada/hurghadalist/'
+					{
+						label: 'Экскурсия в Египет',
+						url: 'https://www.coral.ru/main/egypt/egyptexcurcion/',
+					}
 				]
 			},
 			{
@@ -288,7 +332,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/bali/exbali/'
+					{
+						label: 'Экскурсия на Бали',
+						url: 'https://www.coral.ru/main/bali/exbali/'
+					}
 				]
 			},
 			{
@@ -304,7 +351,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/main/italia/round-trips/'
+					{
+						label: 'Тур в Италию',
+						url: 'https://www.coral.ru/main/italia/round-trips/'
+					}
 				]
 			},
 			{
@@ -314,7 +364,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/italia/ekskursii-v-italii/'
+					{
+						label: 'Экскурсия в Италии',
+						url: 'https://www.coral.ru/italia/ekskursii-v-italii/'
+					}
 				]
 			},
 			{
@@ -330,7 +383,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/kazahstan/ekskursionnye-tury-v-kazahstan/'
+					{
+						label: 'Тур в Казахстан',
+						url: 'https://www.coral.ru/kazahstan/ekskursionnye-tury-v-kazahstan/'
+					}
 				]
 			},
 			{
@@ -343,31 +399,12 @@ const SETTINGS = [
 			},
 			{
 				name: 'Корпоративные программы',
-				list: []
-			}
-		]
-	},
-	{
-		country_name: 'Казахстан',
-		capital: 'Астана',
-		product: [
-			{
-				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/main/qatar/lists-qatar/'
+					{
+						label: 'Казахстан, Алма-Ата',
+						pdf: 'https://cdn.coral.ru/content/img/kazakhstan.pdf'
+					}
 				]
-			},
-			{
-				name: 'Достопримечательности',
-				list: []
-			},
-			{
-				name: 'Экскурсии',
-				list: []
-			},
-			{
-				name: 'Корпоративные программы',
-				list: []
 			}
 		]
 	},
@@ -386,7 +423,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/qatar/lists-qatar/'
+					{
+						label: 'Экскурсия в Катаре',
+						url: 'https://www.coral.ru/main/qatar/lists-qatar/'
+					}
 				]
 			},
 			{
@@ -410,31 +450,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/cyprus/ekskursii-na-kipre/'
-				]
-			},
-			{
-				name: 'Корпоративные программы',
-				list: []
-			}
-		]
-	},
-	{
-		country_name: 'Кипр',
-		capital: 'Доха',
-		product: [
-			{
-				name: 'Экскурсионные туры',
-				list: []
-			},
-			{
-				name: 'Достопримечательности',
-				list: []
-			},
-			{
-				name: 'Экскурсии',
-				list: [
-					'https://www.coral.ru/cyprus/ekskursii-na-kipre/'
+					{
+						label: 'Экскурсия на Кипре',
+						url: 'https://www.coral.ru/cyprus/ekskursii-na-kipre/'
+					}
 				]
 			},
 			{
@@ -458,7 +477,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/mauritius/mauritiuslist/'
+					{
+						label: 'Экскурсия на Маврикий',
+						url: 'https://www.coral.ru/main/mauritius/mauritiuslist/'
+					}
 				]
 			},
 			{
@@ -482,13 +504,19 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/morocco/moroccolist/'
+					{
+						label: 'Экскурсия в Марокко',
+						url: 'https://www.coral.ru/main/morocco/moroccolist/'
+					}
 				]
 			},
 			{
 				name: 'Корпоративные программы',
 				list: [
-					'https://cdn.coral.ru/content/img/morocco.pdf'
+					{
+						label: 'Все Марокко - программа-путешествие',
+						pdf: 'https://cdn.coral.ru/content/img/morocco.pdf'
+					}
 				]
 			}
 		]
@@ -508,7 +536,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/mexico/mexicolist/'
+					{
+						label: 'Экскурсия в Мексике',
+						url: 'https://www.coral.ru/mexico/mexicolist/'
+					}
 				]
 			},
 			{
@@ -524,7 +555,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/uae-lists-weektour/'
+					{
+						label: 'Тур в ОАЭ',
+						url: 'https://www.coral.ru/uae-excursions-weektour/'
+					}
 				]
 			},
 			{
@@ -534,7 +568,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/uae/uaelist/'
+					{
+						label: 'Экскурсии и парки развлечений в ОАЭ',
+						url: 'https://www.coral.ru/main/uae/uaeexcursion/'
+					}
 				]
 			},
 			{
@@ -550,7 +587,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/concepts/ekskursionnie-turi/ekskursionnie-turi-po-rossii/'
+					{
+						label: 'Туры по России',
+						url: 'https://www.coral.ru/concepts/ekskursionnie-turi/ekskursionnie-turi-po-rossii/'
+					}
 				]
 			},
 			{
@@ -564,9 +604,18 @@ const SETTINGS = [
 			{
 				name: 'Корпоративные программы',
 				list: [
-					'https://cdn.coral.ru/content/img/altai.pdf',
-					'https://cdn.coral.ru/content/img/kaliningrad.pdf',
-					'https://cdn.coral.ru/content/img/dagestan.pdf'
+					{
+						label: 'Алтай - горы и озера',
+						url: 'https://cdn.coral.ru/content/img/altai.pdf',
+					},
+					{
+						label: 'Калининград - знакомство',
+						url: 'https://cdn.coral.ru/content/img/kaliningrad.pdf',
+					},
+					{
+						label: 'Горный край - Дагестан',
+						url: 'https://cdn.coral.ru/content/img/dagestan.pdf'
+					},
 				]
 			}
 		]
@@ -586,7 +635,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/seychelles/exseychelles/'
+					{
+						label: 'Экскурсии на Сейшелах',
+						url: 'https://www.coral.ru/main/seychelles/exseychelles/'
+					}
 				]
 			},
 			{
@@ -610,9 +662,18 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/thailand/exthai/',
-					'https://www.coral.ru/main/regthailand/phuket/ekskursii-na-phukete/',
-					'https://www.coral.ru/main/regthailand/pattaya/ekskursii-v-pattaje/'
+					{
+						label: 'Экскурсии в Тайланде',
+						url: 'https://www.coral.ru/main/thailand/exthai/',
+					},
+					{
+						label: 'Экскурсии на Пхукете',
+						url: 'https://www.coral.ru/main/regthailand/phuket/ekskursii-na-phukete/',
+					},
+					{
+						label: 'Экскурсии в Паттайе',
+						url: 'https://www.coral.ru/main/regthailand/pattaya/ekskursii-v-pattaje/'
+					}
 				]
 			},
 			{
@@ -636,7 +697,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/tanzania/zanzibarlist/'
+					{
+						label: 'Экскурсии на Занзибаре',
+						url: 'https://www.coral.ru/main/tanzania/zanzibarlist/'
+					},
 				]
 			},
 			{
@@ -660,7 +724,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/tunis/tunisexcurcion/'
+					{
+						label: 'Экскурсии в Тунисе',
+						url: 'https://www.coral.ru/main/tunis/tunisexcurcion/'
+					},
 				]
 			},
 			{
@@ -676,7 +743,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсионные туры',
 				list: [
-					'https://www.coral.ru/uzbekistan/ekskursionnye-tury-v-uzbekistan/'
+					{
+						label: 'Тур в Узбекистан',
+						url: 'https://www.coral.ru/uzbekistan/ekskursionnye-tury-v-uzbekistan/'
+					}
 				]
 			},
 			{
@@ -690,7 +760,10 @@ const SETTINGS = [
 			{
 				name: 'Корпоративные программы',
 				list: [
-					'https://cdn.coral.ru/content/img/uzbekistan.pdf'
+					{
+						label: 'Узбекистан, Бухара',
+						pdf: 'https://cdn.coral.ru/content/img/uzbekistan.pdf'
+					}
 				]
 			}
 		]
@@ -710,7 +783,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/chernogoriya/montenegrolist/'
+					{
+						label: 'Экскурсии в Черногории',
+						url: 'https://www.coral.ru/main/chernogoriya/montenegrolist/'
+					}
 				]
 			},
 			{
@@ -734,7 +810,10 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/srilanka/exsrilanka/'
+					{
+						label: 'Экскурсии на Шри-Ланке',
+						url: 'https://www.coral.ru/main/srilanka/exsrilanka/'
+					}
 				]
 			},
 			{
@@ -758,7 +837,11 @@ const SETTINGS = [
 			{
 				name: 'Экскурсии',
 				list: [
-					'https://www.coral.ru/main/cuba/cubalists/'
+					{
+						label: 'Экскурсии на Кубе',
+						url: 'https://www.coral.ru/main/cuba/cubalists/'
+					}
+
 				]
 			},
 			{
@@ -768,7 +851,7 @@ const SETTINGS = [
 		]
 	},
 	{
-		country_name: 'Китай',
+		country_name: 'Китайская Народная Республика',
 		capital: 'Пекин',
 		product: [
 			{
@@ -781,15 +864,86 @@ const SETTINGS = [
 			},
 			{
 				name: 'Экскурсии',
+				list: []
+			},
+			{
+				name: 'Корпоративные программы',
 				list: [
-					'https://www.coral.ru/main/cuba/cubalists/'
+					{
+						label: 'Пекин-Шанхай',
+						pdf: 'https://cdn.coral.ru/content/img/china.pdf',
+					},
+					{
+						label: 'Декорации Аватара',
+						pdf: 'https://cdn.coral.ru/content/img/china2.pdf'
+					}
+				]
+			}
+		]
+	},
+	{
+		country_name: 'Кыргыстан',
+		capital: 'Бишкек',
+		product: [
+			{
+				name: 'Экскурсионные туры',
+				list: []
+			},
+			{
+				name: 'Достопримечательности',
+				list: []
+			},
+			{
+				name: 'Экскурсии',
+				list: []
+			},
+			{
+				name: 'Корпоративные программы',
+				list: [
+					{
+						label: 'Кыргыстан, Памиро-Алай',
+						pdf: 'https://cdn.coral.ru/content/img/china.pdf',
+					}
+				]
+			}
+		]
+	},
+	{
+		country_name: 'Индия',
+		capital: 'Нью-Дели',
+		product: [
+			{
+				name: 'Экскурсионные туры',
+				list: []
+			},
+			{
+				name: 'Достопримечательности',
+				list: []
+			},
+			{
+				name: 'Экскурсии',
+				list: [
+					{
+						label: 'Золотой Треугольник + Гоа',
+						url: 'https://www.coral.ru/main/india/indiaexcursionpr/goldentrianglemini/'
+					},
+					{
+						label: 'Тур Тадж Махал + Гоа',
+						url: 'https://www.coral.ru/main/india/indiaexcursionpr/tajmahaltour/'
+					},
+					{
+						label: 'Мумбай + Гоа',
+						url: 'https://www.coral.ru/main/india/indiaexcursionpr/tourinmumbai3/'
+					}
 				]
 			},
 			{
 				name: 'Корпоративные программы',
 				list: [
-					'https://cdn.coral.ru/content/img/china.pdf',
-					'https://cdn.coral.ru/content/img/china2.pdf'
+					{
+						label: 'Индия - 5 городов',
+						pdf: 'https://cdn.coral.ru/content/img/india01022024.pdf',
+					}
 				]
 			}
 		]

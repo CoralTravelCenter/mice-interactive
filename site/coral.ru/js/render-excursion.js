@@ -7,7 +7,9 @@ class ExcursionInfo extends HTMLElement {
 	}
 
 	renderList() {
-		const product_list = this.product.filter(product => { if (product.list.length > 0) return product.list; });
+		const product_list = this.product.filter(product => {
+			if (product.list.length > 0) return product.list;
+		});
 		const product_items = product_list.map(obj => {
 			if (obj.name === 'Корпоративные программы') {
 				return `
@@ -25,7 +27,7 @@ class ExcursionInfo extends HTMLElement {
 					return `
 						<li class='product-type__item'>
 							<a href='${list_item.pdf}' target="_blank">
-								${list_item.label}
+								<span title='${list_item.label}'>${list_item.label}</span>
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M7.95898 3V9.5625M7.95898 9.5625L10.5906 7.0625M7.95898 9.5625L5.32741 7.0625M11.38 11.75H4.53793M2.95898 10.1875V11C2.95898 12.1046 3.85441 13 4.95898 13H10.959C12.0636 13 12.959 12.1046 12.959 11V10.1875" stroke="black" stroke-width="0.8"/>
 								</svg>
@@ -33,7 +35,7 @@ class ExcursionInfo extends HTMLElement {
 						</li>
 					`;
 				}).join('')
-					}
+				}
 				</div>
 			</ul>`;
 			} else {
@@ -49,9 +51,9 @@ class ExcursionInfo extends HTMLElement {
 				</button>
 				<div>
 				${obj.list.map(list_item => {
-					return `<li class='product-type__item'><a href='${list_item}' target="_blank">Название</a></li>`;
+					return `<li class='product-type__item'><a href='${list_item.url}' target="_blank">${list_item.label}</a></li>`;
 				}).join('')
-					}
+				}
 				</div>
 			</ul>`;
 			}
@@ -85,4 +87,10 @@ class ExcursionInfo extends HTMLElement {
 		}
 	}
 }
+
 customElements.define("excursion-info", ExcursionInfo);
+
+const map_id = document.getElementById('map');
+map_id.childNodes.forEach(node => {
+	if (node.nodeType === 3) node.remove();
+})
