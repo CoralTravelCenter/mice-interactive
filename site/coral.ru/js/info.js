@@ -622,7 +622,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Сейшельские острова',
-		capital: 'Виктория',
+		capital_cords: [-4.62001, 55.455],
 		product: [
 			{
 				name: 'Экскурсионные туры',

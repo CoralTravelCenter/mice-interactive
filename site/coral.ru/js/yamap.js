@@ -9,7 +9,7 @@ const map_init_props = {
 }
 
 const map_options = {
-	maxZoom: 5,
+	maxZoom: 10,
 	minZoom: 3,
 	suppressMapOpenBlock: true
 }
@@ -34,7 +34,7 @@ const placemark_options = {
 	iconLayout: 'default#imageWithContent',
 	iconImageHref: place_mark,
 	iconImageSize: [25, 35],
-	iconImageOffset: [-16, -43],
+	iconImageOffset: [0, -35],
 	iconContentOffset: [20, -2]
 }
 
@@ -42,7 +42,7 @@ const map_wrapper = document.querySelector('.map-wrapper');
 const preloader = document.querySelector('.preloader-wrapper');
 const mobileWidthMediaQuery = window.matchMedia('(max-width: 768px)')
 
-const miceMapInit = () => {
+function miceMapInit() {
 	const mice_map = new ymaps.Map('map', map_init_props, map_options);
 	const objectManager = new ymaps.ObjectManager();
 
@@ -57,17 +57,15 @@ const miceMapInit = () => {
 
 	const loadRegions = res => {
 		objectManager.add(res.features.map(feature => {
-			console.log(feature.properties.name)
-			feature.id = feature.properties.iso3166;
-			feature.properties.regionName = feature.properties.iso3166;
 			const target_country = _.find(SETTINGS, obj => obj.country_name === feature.properties.name);
 			(target_country) ? feature.options = active_polygon_options : feature.options = polygon_options;
+			console.log(feature)
 			return feature;
 		}));
 		mice_map.geoObjects.add(objectManager);
 	};
 
-	const generatePlaceMark = (country_name, idx, log, lon) => {
+	const generatePlaceMark = (country_name, log, lon) => {
 		const place_mark_layout = ymaps.templateLayoutFactory.createClass(
 			`<span class='city-placemark-label'>${country_name}</span>`
 		);
@@ -80,7 +78,7 @@ const miceMapInit = () => {
 	const renderMapBorders = () => {
 		ymaps.borders.load('001', {
 			lang: 'ru',
-			quality: 2
+			quality: 3
 		}).then(res => {
 			loadRegions(res);
 			setTimeout(() => {
@@ -106,10 +104,11 @@ const miceMapInit = () => {
 
 	const renderPlacemerksOnMap = () => {
 		SETTINGS.forEach((region, idx) => {
-			const myGeocoder = ymaps.geocode(region.capital);
+			const capitals = ymaps.geocode(region.capital_cords);
 			myGeocoder.then(
 				res => {
-					const [log, lon] = res.geoObjects.properties._data.metaDataProperty.GeocoderResponseMetaData.Point.coordinates;
+					console.log(res)
+					const [lat, long] = res.geoObjects.properties._data.metaDataProperty.GeocoderResponseMetaData.Point.coordinates;
 					const country_marks_collection = new ymaps.GeoObjectCollection();
 					country_marks_collection.add(generatePlaceMark(region.country_name, idx, log, lon));
 					mice_map.geoObjects.add(country_marks_collection);
@@ -140,4 +139,5 @@ const miceMapInit = () => {
 	}
 	updatePolygons();
 }
+
 ymaps.ready().then(() => miceMapInit());
