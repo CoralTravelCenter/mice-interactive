@@ -10,7 +10,8 @@ node_modules/
 npm-debug.log*
 Thumbs.db
 .vscode/
+.fleet/
 .parcel-cache/
 dev/
 prod/
-@CMC/
+@CMS/
