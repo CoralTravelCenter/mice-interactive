@@ -1,7 +1,7 @@
 const SETTINGS = [
 	{
 		country_name: 'Турция',
-		capital: 'Анкара',
+		capital_cords: [39.9199, 32.8543],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -45,7 +45,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Азербайджан',
-		capital: 'Баку',
+		capital_cords: [40.3777, 49.892],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -77,7 +77,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Армения',
-		capital: 'Ереван',
+		capital_cords: [40.1811, 44.5136],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -114,7 +114,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Бахрейн',
-		capital: 'Манама',
+		capital_cords: [26.2279, 50.5857],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -141,7 +141,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Болгария',
-		capital: 'София',
+		capital_cords: [42.6975, 23.3242],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -173,7 +173,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Беларусь',
-		capital: 'Минск',
+		capital_cords: [53.9, 27.5667],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -206,7 +206,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Вьетнам',
-		capital: 'Ханой',
+		capital_cords: [21.0245, 105.841],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -233,7 +233,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Грузия',
-		capital: 'Тбилиси',
+		capital_cords: [41.6941, 44.8337],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -259,13 +259,18 @@ const SETTINGS = [
 			},
 			{
 				name: 'Корпоративные программы',
-				list: []
+				list: [
+					{
+						label: 'Древняя Грузия',
+						pdf: 'https://cdn.coral.ru/content/img/georgia02022024.pdf'
+					}
+				]
 			}
 		]
 	},
 	{
 		country_name: 'Доминиканская Республика',
-		capital: 'Санто-Доминго',
+		capital_cords: [18.4719, -69.8923],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -292,7 +297,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Египет',
-		capital: 'Каир',
+		capital_cords: [30.0626, 31.2497],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -319,7 +324,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Индонезия',
-		capital: 'Джакарта',
+		capital_cords: [-6.21462, 106.845],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -346,7 +351,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Италия',
-		capital: 'Рим',
+		capital_cords: [41.8919, 12.5113],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -378,7 +383,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Казахстан',
-		capital: 'Астана',
+		capital_cords: [51.1801, 71.446],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -410,7 +415,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Катар',
-		capital: 'Доха',
+		capital_cords: [25.2854, 51.531],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -437,7 +442,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Кипр',
-		capital: 'Доха',
+		capital_cords: [35.1753, 33.3642],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -464,7 +469,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Маврикий',
-		capital: 'Порт-Луи',
+		capital_cords: [-20.1619, 57.4989],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -491,7 +496,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Марокко',
-		capital: 'Рабат',
+		capital_cords: [34.0132, -6.83255],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -523,7 +528,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Мексика',
-		capital: 'Мехико',
+		capital_cords: [19.4285, -99.1277],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -550,7 +555,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'ОАЭ',
-		capital: 'Абу-Даби',
+		capital_cords: [24.4667, 54.3667],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -576,13 +581,18 @@ const SETTINGS = [
 			},
 			{
 				name: 'Корпоративные программы',
-				list: []
+				list: [
+					{
+						label: 'Восточный город будущего',
+						pdf: 'https://cdn.coral.ru/content/img/uae.pdf'
+					}
+				]
 			}
 		]
 	},
 	{
 		country_name: 'Россия',
-		capital: 'Москва',
+		capital_cords: [55.7522, 37.6156],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -606,15 +616,15 @@ const SETTINGS = [
 				list: [
 					{
 						label: 'Алтай - горы и озера',
-						url: 'https://cdn.coral.ru/content/img/altai.pdf',
+						pdf: 'https://cdn.coral.ru/content/img/altai.pdf',
 					},
 					{
 						label: 'Калининград - знакомство',
-						url: 'https://cdn.coral.ru/content/img/kaliningrad.pdf',
+						pdf: 'https://cdn.coral.ru/content/img/kaliningrad.pdf',
 					},
 					{
 						label: 'Горный край - Дагестан',
-						url: 'https://cdn.coral.ru/content/img/dagestan.pdf'
+						pdf: 'https://cdn.coral.ru/content/img/dagestan.pdf'
 					},
 				]
 			}
@@ -649,7 +659,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Таиланд',
-		capital: 'Бангкок',
+		capital_cords: [13.754, 100.501],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -684,7 +694,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Танзания',
-		capital: 'Бангкок',
+		capital_cords: [-6.17221, 35.7395],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -711,7 +721,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Тунис',
-		capital: 'Тунис',
+		capital_cords: [36.819, 10.1658],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -738,7 +748,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Узбекистан',
-		capital: 'Ташкент',
+		capital_cords: [41.2646, 69.2163],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -770,7 +780,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Черногория',
-		capital: 'Подгорица',
+		capital_cords: [42.4411, 19.2636],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -797,7 +807,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Шри-Ланка',
-		capital: 'Шри-Джаяварденепура-Котте',
+		capital_cords: [6.88297, 79.9071],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -824,7 +834,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Куба',
-		capital: 'Гавана',
+		capital_cords: [23.133, -82.383],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -852,7 +862,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Китайская Народная Республика',
-		capital: 'Пекин',
+		capital_cords: [39.9075, 116.397],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -883,7 +893,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Кыргыстан',
-		capital: 'Бишкек',
+		capital_cords: [42.87, 74.59],
 		product: [
 			{
 				name: 'Экскурсионные туры',
@@ -910,7 +920,7 @@ const SETTINGS = [
 	},
 	{
 		country_name: 'Индия',
-		capital: 'Нью-Дели',
+		capital_cords: [28.6358, 77.2244],
 		product: [
 			{
 				name: 'Экскурсионные туры',
