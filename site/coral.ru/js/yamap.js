@@ -89,7 +89,7 @@ function miceMapInit() {
 
 	const loadRegions = async () => {
 		try {
-			const ymaps_borders = await ymaps.borders.load('001', { lang: 'ru', quality: 3 });
+			const ymaps_borders = await ymaps.borders.load('001', { lang: 'ru', quality: 1 });
 			if (ymaps_borders) {
 				renderRegions(ymaps_borders);
 				setTimeout(() => {
@@ -123,14 +123,6 @@ function miceMapInit() {
 		}
 	}
 	mice_map.geoObjects.events.add('click', onPinClickRenderInformation);
-
-	const updatePolygons = type => {
-		const layouts = type === 'text' ? textLayouts : imgLayouts;
-		objectManager.objects.each((polygon) => {
-			objectManager.objects.setObjectOptions(polygon.id, { labelLayout: layouts.label })
-		});
-	}
-	updatePolygons();
 }
 
 ymaps.ready().then(() => miceMapInit());
